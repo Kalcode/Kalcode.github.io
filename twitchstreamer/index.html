@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Twitch Preview</title>
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="content">
+    <table>
+      <caption>
+        <h2>Twitch Streamers</h2>
+        <input class="search" type="text" placeholder="Filter">
+        <div class="sort-box">
+          <form>
+            <label><input type="radio" name="status" value="All" checked> All</label>
+            <label><input type="radio" name="status" value="Online"> Online</label>
+            <label><input type="radio" name="status" value="Offline"> Offline</label>
+          </form>
+        </div>
+      </caption>
+      <tr>
+        <th class="status">Status</th>
+        <th class="streamer">Streamer</th>
+        <th class="game">Game</th>
+      </tr>
+      <!---->
+    </table>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

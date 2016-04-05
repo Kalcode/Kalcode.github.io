@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Local Weather Options</title>
+    
+    
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+  <div class="wrapper">
+    <div class="content text-center">
+
+      <div class="title text-center">
+        <h1>Weather</h1>
+      </div>
+      <div class="name-box">
+        <div class="city">
+          Loading...
+        </div>
+
+        <div class="coords">
+          (Lat: <span class="lat">??</span> Lon: <span class="lon">??</span>)
+        </div>
+      </div>
+
+      <div class="temp-box">
+        <span class = "temp">??&deg;F</span>
+        <span class = "hilow"> <b>High:</b> <span class="hi">??&deg;F</span> <br> <b>Low:</b> <span class="low">??&deg;F</span></span>
+        <span class = "icon therm"></span>
+        <span id="weather" class = "icon"></span>
+      </div>
+
+      <div class="weather">
+        Loading..
+      </div>
+      
+      <div class = "zipcode-box">
+        <input class="zipcode" type="text" name="zipcode" placeholder="Zipcode(5-digits)">
+        <button class="zipcode">Fetch</button>
+      </div>
+      
+      <div class="convert-box">
+        <button class="convert">Celcius</button>
+      </div>
+
+    </div>
+  </div>
+  <!--<button class="get">Cheat</button>-->
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

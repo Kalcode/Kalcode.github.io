@@ -1,0 +1,94 @@
+html, body {
+  width: 100%;
+}
+.content{
+  margin: 20px auto;
+  width: 420px;;
+}
+
+
+caption {
+  background-color: #FFF;
+  border: 1px solid black;
+  box-shadow: 1px 1px 3px black;
+}
+
+h2{
+  margin: 10px 0;
+  text-align: center;
+  color: black;
+}
+.search {
+  margin-left: 15px;
+  width: 160px;
+}
+.sort-box {
+  display:inline-block;
+  padding-left: 10px;
+}
+
+label {
+  padding: 3px;
+}
+
+.sort-box input[type="radio"] {
+  -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
+  -moz-appearance: checkbox;    /* Firefox */
+  -ms-appearance: checkbox;     /* not currently supported */
+}
+.sort-box input[type="radio"]:focus {
+  outline: none;
+}
+
+
+table {
+  width: 400px;
+  background-color: #d9d9d9;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 1px 1px 3px black;
+
+}
+
+
+
+.link:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+} 
+
+th {
+  background-color: #a6a6a6;
+  color: #0d0d0d;
+}
+
+th, td{
+  border-bottom: 1px solid black;
+  padding: 2px 5px;
+
+}
+
+.link td {
+  border-bottom: 1px solid #999999;
+}
+.status {
+  width: 50px;
+
+}
+
+.name {
+  color: #006bb3;
+  width: 150px;
+}
+
+.game {
+  width: 194px;
+}
+
+.Online {
+  color: green;
+}
+
+.Offline {
+  color: red;
+}

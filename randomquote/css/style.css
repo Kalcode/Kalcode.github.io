@@ -1,0 +1,105 @@
+body {
+  background-image: url("../images/people.jpg");
+  background-position:center;
+  background-size: cover;
+}
+
+.content {
+  display: inline-block;
+  margin: auto;
+  margin-top: 2px;
+}
+
+.machine {
+  background-image: url("../images/quoteMachine.png");
+  background-repeat: no-repeat;
+  width: 569px;
+  height: 863px;
+  margin: auto;
+  position: relative;
+}
+
+.machine>div {
+  overflow: hidden;
+  //background-color:red;
+}
+
+.title-box {
+  position: absolute;
+  top: 80px;
+  left: 83px;
+  height: 127px;
+  width: 400px;
+}
+.title-box h1{
+  margin-top:20px;
+  color: #ffd700;
+  text-shadow: 1px 1px 1px #ffdd1a,
+               3px 3px 1px #665700;
+}
+
+.author-box {
+  position: absolute;
+  top: 238px;
+  left: 68px;
+  height: 136px;
+  width: 431px;
+}
+
+.quote-box {
+  position: absolute;
+  top: 401px;
+  left: 54px;
+  height: 260px;
+  width: 459px;
+}
+.quote-box p {
+  font-size: 25px;
+  padding: 0 5px 0;
+}
+
+.button-box {
+  position: absolute;
+  top: 737px;
+  left: 10px;
+  height: 108px;
+  width: 548px;
+}
+
+.button-box .btn-default {
+  background-color: #ffd700;
+  border: 1px solid #665700;
+  text-shadow: 1px 1px 1px #665700;
+
+  border-radius:30%;
+  margin: 10px 15px 0;
+  height: 90px;
+  width: 140px;
+  line-height: 80px;
+  padding: 0;
+
+  color: black;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.button-box .btn-default:hover {
+  background-color: #ffd700;
+  border: 1px solid #665700;
+
+  color: #998200;
+
+}
+
+.button-box .btn-default:active {
+  background-color: #ffd700;
+  border: 1px solid #665700;
+
+  -webkit-box-shadow: inset 0px 9px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 9px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 9px 5px 0px rgba(0,0,0,0.75);
+
+  color: #998200;
+
+}

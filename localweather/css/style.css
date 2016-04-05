@@ -1,0 +1,176 @@
+body {
+  background-color: teal;
+}
+
+.content {
+  margin: 10% auto;
+
+  height: 330px;
+  width: 320px;
+
+  background-color: #FFF;
+  border-radius: 8%;
+
+  box-shadow: 0px 2px 9px black;
+  box-sizing: border-box;
+
+
+}
+
+.title {
+  background-color: #808080;
+  height: 50px;
+  width: 320px;
+  border-radius: 20px 20px 0 0;
+
+  border-bottom: 1px solid #595959;
+  box-shadow: 0px -2px 0 #8c8c8c;
+
+}
+
+h1 {
+  margin: 0;
+  padding-top: 4px;
+  color: rgba(102, 102, 102, .4);
+  font-weight: bold;
+  text-shadow: 1px 2px 6px #808080,
+               0 0 0 #000,
+               1px 2px 6px #808080;
+}
+
+.name-box{
+  box-sizing: content-box;
+  height:60px;
+  background-color: #e6e6e6;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted black;
+
+}
+
+.city {
+  font-size: 20px;
+  padding-top: 8px;
+  font-weight: 600;
+}
+
+
+
+.coords {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.temp-box{
+  position: relative;
+  height: 70px;
+  padding-top: 8px;
+}
+
+.icon {
+  display:inline-block;
+  height: 70px;
+  width: 70px;
+  background-image:url("../images/meteocons.png");
+  background-repeat:  no-repeat;
+}
+
+.icon.therm {
+  background-position: 2px -395px;
+  margin-left: -15px;
+  margin-right: 5px;
+}
+
+.temp {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 28px;
+
+  padding-top: 5px;
+
+}
+
+.hilow {
+  position: absolute;
+  top: 50px;
+  left: 35px;
+}
+
+.weather {
+  font-size: 20px;
+  margin: 10px 0;
+  padding-top: 10px;
+
+  font-weight: bold;
+}
+
+.zipcode-box {
+  width: 100%;
+  background-color: #e6e6e6;
+  height: 30px;
+
+  border-top: 1px dotted black;
+}
+
+input.zipcode {
+  background-color: #f2f2f2;
+  display: inline-block;
+  height: 100%;
+  width: 70%;
+  padding: 0;
+  margin-right: -3px;
+  border: none;
+}
+
+button.zipcode {
+  vertical-align: top;
+  background-color: #d9d9d9;
+  display: inline-block;
+  border-right: 2px solid grey;
+  border-left: 2px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  padding: 0;
+  height: 100%;
+  width:29%;
+  margin-right: -3px;
+  padding-top: 4px;
+}
+
+.convert-box {
+  height: 51px;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+
+}
+
+.convert {
+  width: 100%;
+  height: 100%;
+  border-top:none;
+  border-radius: 0 0 20px 20px;
+  background-color: #d9d9d9;
+  font-size: 20px;
+
+}
+
+
+/* Icons for weather type */
+
+.icon.snow {
+  background-position: -320px -158px;
+}
+
+.icon.partial {
+  background-position: -560px 2px;
+}
+
+.icon.thunder {
+  background-position: -560px -158px;
+}
+
+.icon.rainy {
+  background-position: -640px -80px;
+}
+
+.icon.sunny {
+  background-position: -80px 5px;
+}
