@@ -13,5 +13,6 @@ towards back-end, though my goal is full-stack.
 
 Say `Hello` at [davidclausen2051@gmail.com](mailto:davidclausen2051@gmail) or find
 me on:
+
 {% include social.html %}
 ---

@@ -5,7 +5,7 @@ email: davidclausen2051@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Aspiring Web Developer and Ex-Chef,
   Currently Looking for Full-Stack Opportunities.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/blog/" # the subpath of your site, e.g. /blog/
 url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
 logourl: /assets/images/logo.png # Site logo
 author: "David Clausen"
