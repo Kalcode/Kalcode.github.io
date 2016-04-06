@@ -61,9 +61,8 @@ button {
     color: white;
     background-color: #adadad;
     border:none;
-    font-family: Michroma;
-    font-weight: bold;
-    font-size: 15px;
+    font-family: Aldrich;
+    font-size: 19px;
     display: inline-block;
     padding: 0;
     width: 45px;
@@ -74,6 +73,10 @@ button {
     border: 1px solid grey;
 /*    border: 5px solid rgba(0,0,0, .3);*/
     
+}
+
+.altFont{
+
 }
 
 button:active {
