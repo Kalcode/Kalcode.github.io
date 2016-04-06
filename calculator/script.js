@@ -1,5 +1,6 @@
 var lcd = $(".digits");
 var memory = "";
+var operatorDisplay = "";
 var operator = "";
 var equation = lcd.text();
 var clear = true;
@@ -82,7 +83,7 @@ function operate(sign){
   }
   if(sign == "%" ) {
     var results = Number("0" + equation.replace(/[\/\*\-\+]/g, "")) * (Number(getDisplay())/100);
-    operator = " ";
+    operatorDisplay = " ";
     if (results === 0) clear = true;
     display(results);
     return;
@@ -92,24 +93,30 @@ function operate(sign){
     equals();
   }
 
+  // if(["+", "-", "*", "/",].indexOf(equation[equation.length-1]) > -1)
+  //   equation = equation.slice(0, equation.length-1);
 
-  equation = getDisplay();
+  // if(equation == ""){
+  //   equation = getDisplay();
+  // }
+  if (equation == "")
+    equation += getDisplay();
   switch(sign){
     case "+":
-      equation += "+";
       operator = "+";
+      operatorDisplay = "+";
       break;
     case "-":
-      equation += "-";
       operator = "-";
+      operatorDisplay = "-";
       break;
     case "\u00F7":
-      equation += "/";
-      operator = "\u00F7";
+      operator = "/";
+      operatorDisplay = "\u00F7";
       break;
     case "X":
-      equation += "*";
-      operator = "\u00D7";
+      operator = "*";
+      operatorDisplay = "\u00D7";
       break;
 
   }
@@ -120,11 +127,14 @@ function operate(sign){
 }
 
 function equals() {
-  if(!operator || clear==true) return;
-  equation = String(eval(equation + getDisplay()));
+
+  if(!operator) return;
+  console.log(equation+operator+getDisplay()+"="+String(eval(equation + operator +  getDisplay())));
+  equation = String(eval(equation + operator +  getDisplay()));
+  operatorDisplay = "";
   operator = "";
   display(checkLength(equation));
-
+  equation = "";
 
   clear = true;
 
@@ -138,10 +148,16 @@ function getDisplay()
 function clearDisplay(all = false){
   if (all) {
     equation = "";
+    operatorDisplay = "";
     operator = "";
+    display("0");
 
   }
-  display("0");
+  else {
+    operatorDisplay = "";
+    operator = "";
+    display("0");
+  }
   clear = true;
 
 }
@@ -156,12 +172,18 @@ function checkLength(string){
 }
 
 function display(string, append = false) {
+  if (string === "." && lcd.text().indexOf(".") > -1)
+    return;
+
+  // if (lcd.text()=="0")
+  // {
+  //   lcd.text("");
+  // }
   if(clear) {
     lcd.text("");
     clear = false;
   }
-
-  $(".function").text(operator);
+  $(".function").text(operatorDisplay);
 
   if(append) {
     lcd.text(lcd.text() + string);
@@ -197,7 +219,6 @@ function memoryFunc(func){
 }
 
 function keyboard(e){
-  console.log(e);
   var keycode = e.which
   if(keycode >= 96 && 105 >= keycode)
   {
