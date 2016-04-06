@@ -14,6 +14,7 @@ $(document).keydown(keyboard);
 
 });
 
+//buttons
 function button() {
   var input = $(this).text();
   if (input == "OFF" || lcd.css("display") == "none"){
@@ -71,6 +72,7 @@ function button() {
 
 }
 
+//Take in sign operations and process
 function operate(sign){
   save = "";
   if(sign == "\u221A") {
@@ -126,9 +128,10 @@ function operate(sign){
   clear = true;
 }
 
+//evauluate and save last operation
 function equals() {
 
-  if(!operator || clear == true && save == "")
+  if( (!operator) )
   {
     if (save){
       equation = String(eval(getDisplay() + save ));
@@ -140,7 +143,7 @@ function equals() {
     else
       return;
   }
-  console.log(equation+operator+getDisplay()+"="+String(eval(equation + operator + "(" + getDisplay()+")")));
+  //console.log(equation+operator+getDisplay()+"="+String(eval(equation + operator + "(" + getDisplay()+")")));
   equation = String(eval(equation + operator + "(" + getDisplay() + ")" ));
   save = operator+ "(" + getDisplay() + ")";
   operatorDisplay = "";
@@ -153,28 +156,32 @@ function equals() {
 
 }
 
+
 function getDisplay()
 {
   return lcd.text();
 }
 
+//clear CE and C-ON function
+//Clear Entry and Clear
 function clearDisplay(all = false){
   if (all) {
     equation = "";
     operatorDisplay = "";
     operator = "";
     display("0");
-
+    clear = true;
   }
   else {
     operatorDisplay = "";
     operator = "";
     display("0");
   }
-  clear = true;
+
 
 }
 
+//Check length, too long then cut it short.
 function checkLength(string){
   string = String(string);
   if (string.length > 14) {
@@ -184,11 +191,12 @@ function checkLength(string){
   return string;
 }
 
+//write to the div lcd-display
 function display(string, append = false) {
-  if (string === "." && lcd.text().indexOf(".") > -1 && !clear) 
+  if (string === "." && lcd.text().indexOf(".") > -1 && !clear)
     return;
 
-  if(clear) {
+  if(clear || lcd.text() === "0") {
     lcd.text("");
     clear = false;
   }
@@ -202,6 +210,7 @@ function display(string, append = false) {
   }
 }
 
+//The MC MR M- M+ functions
 function memoryFunc(func){
   var memDiv = $(".memory");
   if (func == "clear")
@@ -227,6 +236,7 @@ function memoryFunc(func){
 
 }
 
+//translate the keyboard input into button clicks
 function keyboard(e){
   var keycode = e.which
   if(keycode >= 96 && 105 >= keycode)
