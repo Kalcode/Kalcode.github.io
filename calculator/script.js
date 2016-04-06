@@ -136,13 +136,12 @@ function getDisplay()
 }
 
 function clearDisplay(all = false){
-  display("0");
-
   if (all) {
     equation = "";
     operator = "";
 
   }
+  display("0");
   clear = true;
 
 }
