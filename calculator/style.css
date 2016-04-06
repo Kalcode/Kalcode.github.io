@@ -1,0 +1,103 @@
+/* Fonts */
+@font-face {
+    font-family: digital-7;
+    src: url("digital-7.ttf");
+}
+
+
+.content {
+    width: 455px;
+    height: 450px;
+    background-color: #403f3f;
+}
+
+.lcd{
+    padding: 25px 10px;
+}
+
+.display {      
+    margin: auto;
+    padding: 0 15px;
+    text-align: right;
+    width: 400px;
+    
+    color: rgba(0,0,0,.6);
+    background-color: #e4e2c2;
+    
+    font-family: digital-7;
+    font-size: 50px;
+    font-weight: 600;
+    border-radius: 5px;
+    
+    box-shadow: inset -4px 6px 3px rgba(0,0,0,.1);
+
+}
+
+.buttons{
+    text-align: center;
+}
+
+.column {
+    display: inline-block;
+    height: 300px;
+    vertical-align: top;
+    margin: 10px 5px;
+}
+
+.col-1 {
+     width: 15%;    
+}
+
+.col-2 {
+    width: 45%;
+}
+
+.col-3 {
+    width: 30%;
+}
+
+button {
+    box-sizing: content-box;
+    color: white;
+    background-color: #adadad;
+    border:none;
+    font-family: Michroma;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+    padding: 0;
+    width: 45px;
+    height: 40px;
+    margin: 7px 5px;
+    text-align: top;
+    box-shadow: 0px 4px 0 rgb(150,150,150);
+    border: 1px solid grey;
+/*    border: 5px solid rgba(0,0,0, .3);*/
+    
+}
+
+button:active {
+    position: relative;
+    top: 3px;
+    box-shadow: 0px 1px 0 rgb(150,150,150);
+}
+
+button:focus {
+    outline: none;
+}
+
+
+.top-btn{
+    height: 25px;
+    margin-bottom: 15px;
+    
+}
+
+.big-btn {
+    height: 100px;
+    
+}
+
+.zero-btn {
+    width: 110px;
+}
