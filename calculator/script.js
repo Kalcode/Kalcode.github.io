@@ -93,12 +93,6 @@ function operate(sign){
     equals();
   }
 
-  // if(["+", "-", "*", "/",].indexOf(equation[equation.length-1]) > -1)
-  //   equation = equation.slice(0, equation.length-1);
-
-  // if(equation == ""){
-  //   equation = getDisplay();
-  // }
   if (equation == "")
     equation += getDisplay();
   switch(sign){
@@ -129,7 +123,7 @@ function operate(sign){
 function equals() {
 
   if(!operator) return;
-  console.log(equation+operator+getDisplay()+"="+String(eval(equation + operator +  getDisplay())));
+  //console.log(equation+operator+getDisplay()+"="+String(eval(equation + operator +  getDisplay())));
   equation = String(eval(equation + operator +  getDisplay()));
   operatorDisplay = "";
   operator = "";
@@ -175,10 +169,6 @@ function display(string, append = false) {
   if (string === "." && lcd.text().indexOf(".") > -1)
     return;
 
-  // if (lcd.text()=="0")
-  // {
-  //   lcd.text("");
-  // }
   if(clear) {
     lcd.text("");
     clear = false;
@@ -201,7 +191,7 @@ function memoryFunc(func){
     memDiv.hide();
     return;
   }
-  else if( func === "recall" & memory != ""){
+  else if( func === "recall" & memory !== ""){
     display(memory);
   }
   else if( func == "add"){
