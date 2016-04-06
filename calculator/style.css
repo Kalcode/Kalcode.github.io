@@ -24,7 +24,7 @@
     padding: 0 10px;
     text-align: right;
     direction: rtl;
-    width: 400px;
+    width: 380px;
     height: 71px;
 
     color: rgba(0,0,0,.6);
@@ -33,11 +33,12 @@
     font-family: digital-7;
     font-size: 50px;
     font-weight: 600;
+    box-sizing: content-box;
     border-radius: 5px;
-
+    border: 2px solid #676565;
     box-shadow: inset -4px 6px 3px rgba(0,0,0,.1);
     overflow: hidden;
-
+    text-shadow: -4px 4px 0px rgba(0, 0, 0, .1);
 }
 
 .memory {
@@ -51,11 +52,14 @@
   display: inline-block;
   margin-right: 25px;
   unicode-bidi: plaintext;
+
 }
 
 .function {
   position: absolute;
   width: 20px;
+  margin-top: 5px;
+  font-size: 40px;
 
 
 }
@@ -98,9 +102,9 @@ button {
     height: 40px;
     margin: 7px 5px;
     text-align: top;
-    box-shadow: 0px 4px 0 rgb(150,150,150);
     border: 1px solid grey;
-/*    border: 5px solid rgba(0,0,0, .3);*/
+    border-radius: 2px;
+    box-shadow: 0px 4px 0 rgb(150,150,150);
 
 }
 
@@ -149,6 +153,12 @@ button:focus {
     height: 25px;
     margin-bottom: 15px;
 
+}
+
+hr {
+  border-width: 2px;
+  margin: auto;
+  width: 80%;
 }
 
 .big-btn {
