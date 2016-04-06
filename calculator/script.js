@@ -90,8 +90,8 @@ function operate(sign){
   if(sign == "%" ) {
     var results = Number("0" + equation.replace(/[\/\*\-\+]/g, "")) * (Number(getDisplay())/100);
     //operatorDisplay = " ";
-    if (results === 0) clear = true;
     display(results);
+    if (equation === "") clear = true;
     return;
   }
 
@@ -128,7 +128,7 @@ function operate(sign){
 
 function equals() {
 
-  if(!operator || clear == true && equation !== "")
+  if(!operator || clear == true && save == "")
   {
     if (save){
       equation = String(eval(getDisplay() + save ));
@@ -185,7 +185,7 @@ function checkLength(string){
 }
 
 function display(string, append = false) {
-  if (string === "." && lcd.text().indexOf(".") > -1)
+  if (string === "." && lcd.text().indexOf(".") > -1 && !clear) 
     return;
 
   if(clear) {
