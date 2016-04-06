@@ -4,6 +4,7 @@ var operatorDisplay = "";
 var operator = "";
 var equation = lcd.text();
 var clear = true;
+var save = "";
 
 $(document).ready(function () {
 
@@ -71,19 +72,24 @@ function button() {
 }
 
 function operate(sign){
-
+  save = "";
   if(sign == "\u221A") {
     display(checkLength(Math.sqrt(Number(getDisplay()))));
     clear = true;
     return;
   }
   if(sign == "+/-"){
+    var saveClear = clear;
     display(checkLength(Number(getDisplay()*-1)));
+    clear = saveClear;
+    if(equation !== "" && clear){
+      equation = String(Number(equation) * -1);
+    }
     return;
   }
   if(sign == "%" ) {
     var results = Number("0" + equation.replace(/[\/\*\-\+]/g, "")) * (Number(getDisplay())/100);
-    operatorDisplay = " ";
+    //operatorDisplay = " ";
     if (results === 0) clear = true;
     display(results);
     return;
@@ -122,12 +128,25 @@ function operate(sign){
 
 function equals() {
 
-  if(!operator) return;
-  //console.log(equation+operator+getDisplay()+"="+String(eval(equation + operator +  getDisplay())));
-  equation = String(eval(equation + operator +  getDisplay()));
+  if(!operator || clear == true && equation !== "")
+  {
+    if (save){
+      equation = String(eval(getDisplay() + save ));
+      display(checkLength(equation));
+      equation = "";
+      clear = true;
+      return;
+    }
+    else
+      return;
+  }
+  console.log(equation+operator+getDisplay()+"="+String(eval(equation + operator + "(" + getDisplay()+")")));
+  equation = String(eval(equation + operator + "(" + getDisplay() + ")" ));
+  save = operator+ "(" + getDisplay() + ")";
   operatorDisplay = "";
   operator = "";
   display(checkLength(equation));
+
   equation = "";
 
   clear = true;
