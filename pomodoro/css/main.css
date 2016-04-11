@@ -62,12 +62,15 @@ h2, h3 {
 }
 .settings-buttons div{
   display: block;
+  clear:both;
 }
-input[type=number]{
 
+input[type=number]{
+  appearance:textfield;
   width: 70px;
-  margin-left: 10px;
   text-align: center;
+  float:right;
+
 
 }
 
