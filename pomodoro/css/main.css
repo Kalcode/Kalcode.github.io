@@ -77,7 +77,6 @@ body {
     width: 300px;
     border-left: 1px solid #737373;
     outline: 3px solid #b3b3b3;
-    padding-bottom: 40px;
 
 
 }
@@ -383,4 +382,8 @@ input[type=number] {
   height: 80px;
   width: 80px;
   text-shadow: none;
+}
+
+.default {
+  margin-bottom: 40px;
 }

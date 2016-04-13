@@ -121,7 +121,7 @@ $(".settings-btn").click(function(evt){
   $(".settings").toggle("slide",{direction: 'right'}, 400);
 });
 //close settings panel clicking outside it
-$(".container-fluid").click(function(evt) {
+$(document).click(function(evt) {
   if( $(".settings").css("display") !== "none" )
     $(".settings").hide("slide",{direction: 'right'}, 400);
 });
