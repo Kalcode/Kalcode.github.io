@@ -67,7 +67,8 @@ function setup() {
 
 // Delete Cookies
 function deleteCookies() {
-  var cookies = ["workLength", "shortLength",, "longLength", "mute", "volume", "workIntervals", "theme" ];
+  var cookies = ["workLength", "shortLength",, "longLength", "mute", "volume",
+   "workIntervals", "theme", "scale" ];
   for (var index in cookies) {
     Cookies.remove(cookies[index]);
   }
