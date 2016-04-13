@@ -115,6 +115,10 @@ function pause() {
 $(".cbtn").click(function(evt){
   evt.stopPropagation();
 });
+$(".settings").click(function(evt){
+  evt.stopPropagation();
+});
+
 //Open settings panel
 $(".settings-btn").click(function(evt){
   evt.stopPropagation();
