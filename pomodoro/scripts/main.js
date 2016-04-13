@@ -318,7 +318,7 @@ function updateScale(){
     else if(scale == "3") adjustedScale = 1.6;
     else if(scale == "4") adjustedScale = 2;
     clockDiv.css("transform", "scale("+ adjustedScale +")");
-    clockDiv.css("transform-origin", "50% 30%");
+    clockDiv.css("transform-origin", "50% 0%");
   }
   Cookies.set("scale", scale, { expires: 365 });
 
@@ -422,4 +422,9 @@ function displayIntervalType(intervals) {
       $(".interval-count").removeClass("interval-type-scroll");
     },500);
   },500);
+}
+
+function rescale(){
+  var width = $(window).width();
+  var height = $(window).width();
 }
