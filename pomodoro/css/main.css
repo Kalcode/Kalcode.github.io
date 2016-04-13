@@ -95,7 +95,7 @@ body {
     color: black;
 }
 h2, h3 {
-  display: inline-block;
+
     padding: 0;
     margin: 0;
 }
@@ -115,7 +115,8 @@ h2, h3 {
 .close {
   position: absolute;
   top:0;
-  left:10px;
+  left:20px;
+  font-size: 40px;
 }
 
 .settings-buttons label {
@@ -181,7 +182,10 @@ input[type=number] {
   background: linear-gradient(45deg, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%);
   border: 1px solid #cccccc;
   box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+  transform: scale(1);
+  transform-origin: 0% 0%;
 }
+/* 1 0% 0%, 1.3, 1.6, 2, 50% 30%*/
 
 
 
@@ -386,6 +390,12 @@ input[type=number] {
   height: 80px;
   width: 80px;
   text-shadow: none;
+}
+
+
+.scale-btns{
+  margin-top: 10px;
+  margin-left: 30px;
 }
 
 .default {

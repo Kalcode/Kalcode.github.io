@@ -32,21 +32,6 @@
 
 <body>
 
-    <!-- <div class="container-fluid">
-        <div class="content">
-          <div class="title">work</div>
-          <div class="clock"></div>
-          <button class="settings-btn">Settings</button>
-          <audio src="sounds/alarm1.mp3"></audio>
-          <div class="timer-buttons">
-            <button class="start">START</button>
-            <button class="pause">PAUSE</button>
-            <button class="reset">RESET</button>
-          </div>
-        </div>
-    </div> -->
-
-
   <div class="container-fluid">
     <div class="content">
 
@@ -129,6 +114,16 @@
         <button class="pink theme-btn">Pink</button>
         <button class="clear theme-btn">Clear</button>
       </div>
+      <div class="scale-div">
+        <h3>Scale</h3>
+        <hr>
+        <button class="fa fa-plus scale-btns" id="scale-up"></button>
+        <span class="scale scale-btns">1</span>
+        <button class="fa fa-minus scale-btns" id="scale-down"></button>
+      </div>
+      <br>
+      <h3>Reset Settings</h3>
+      <hr>
       <button class="default">Reset to Default</button>
       <div id="updatedSettings">Setting have updated, new settings won't take effect until timer resets or next interval.
       </div>

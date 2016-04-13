@@ -11,7 +11,7 @@ var longLength;
 var volume;
 var mute;
 var currentTheme;
-
+var scale;
 
 
 // Setup
@@ -48,6 +48,8 @@ function devMode(){
 
 function setup() {
   changeTheme(currentTheme);
+  $(".scale").text(scale);
+  updateScale();
   var settings = [];
   settings.push($("#workLength").val(workLength));
   settings.push($("#shortLength").val(shortLength));
@@ -81,6 +83,7 @@ function fetchCookies() {
   mute = Cookies.get("mute")? Cookies.get("mute") : false;
   mute = mute === "true" ? true : false;
   currentTheme = Cookies.get("theme")? Cookies.get("theme") : "tomato";
+  scale = Cookies.get("scale")? Cookies.get("scale") : "1";
 }
 
 // Button's functions
@@ -110,6 +113,15 @@ function pause() {
     clockHand("pause");
   }
 }
+
+
+//Scale Buttons
+$("#scale-up").click(function(){
+  scaleButtons(1);
+});
+$("#scale-down").click(function(){
+  scaleButtons(-1);
+});
 
 // Prevent settings panel from closing if interacting with timer buttons
 $(".cbtn").click(function(evt){
@@ -293,6 +305,36 @@ function changeTheme(theme){
   Cookies.set("theme", currentTheme, { expires: 365 });
 }
 
+function updateScale(){
+  var clockDiv = $(".clock");
+  if (scale === "1") {
+    clockDiv.css("transform", "scale(1)");
+    clockDiv.css("transform-origin", "0% 0%");
+  }
+  else {
+    var adjustedScale = 0;
+    if(scale == "2") adjustedScale = 1.3;
+    else if(scale == "3") adjustedScale = 1.6;
+    else if(scale == "4") adjustedScale = 2;
+    clockDiv.css("transform", "scale("+ adjustedScale +")");
+    clockDiv.css("transform-origin", "50% 30%");
+  }
+  Cookies.set("scale", scale, { expires: 365 });
+
+}
+
+function scaleButtons(direction){
+  var newScale = Number($(".scale").text()) + direction;
+  console.log(newScale);
+  newScale = newScale;
+  if(newScale == Number(scale) || newScale < 1 || newScale > 4)
+    return
+  else {
+    $(".scale").text(newScale);
+    scale = String(newScale);
+    updateScale();
+  }
+}
 
 //Fired when timer finishes
 function alarm(condtion){
