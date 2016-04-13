@@ -207,7 +207,7 @@ function update(val){
   var tempintervalType = titleCase(clock.currentIntervalType);
   if(tempintervalType !== intervalType) {
     var tempIntervals = clock.workSessions+1;
-    intervalType = tempintervalType;
+    intervalType = tempintervalType == "Work" ? "Work" : "Break";
     if(currentInterval !== tempIntervals && intervalType === "Work") {
       currentInterval = tempIntervals;
       displayIntervalType(true);
@@ -277,7 +277,7 @@ function updatedSettings(input) {
   else if(skip) {
     showNotice(true);
   }
-  Cookies.set(prop, val);
+  Cookies.set(prop, val, { expires: 365 });
 
 }
 
@@ -290,7 +290,7 @@ function changeTheme(theme){
   $(".clock-face").addClass(currentTheme);
   $(".clock-display").addClass(currentTheme);
 
-  Cookies.set("theme", currentTheme);
+  Cookies.set("theme", currentTheme, { expires: 365 });
 }
 
 
