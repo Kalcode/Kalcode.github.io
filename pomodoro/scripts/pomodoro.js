@@ -17,9 +17,9 @@ function Pomodoro(func){
   this.workLength = 25*60*1000;
 
   this.intervalType = {
-      "work" : .05*60*1000,
-      "short" : .025*60*1000,
-      "long" : .1*60*1000,
+      "work" : 25*60*1000,
+      "short" : 5*60*1000,
+      "long" : 15*60*1000,
   }
 
   //variables for current set time lengths
@@ -110,6 +110,7 @@ Pomodoro.prototype.update = function () {
 };
 
 Pomodoro.prototype.start = function () {
+  clearInterval(this.timerID);
   this.finished = false;
   this.paused = false;
   this.lastTime = Date.now();

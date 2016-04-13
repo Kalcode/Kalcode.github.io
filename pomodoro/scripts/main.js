@@ -1,11 +1,26 @@
 
 // Global Variables
 var flashing = false;
+var timeHand = "";
+var intervalType = "Work";
+var currentInterval = 1;
+var workIntervals;
+var workLength;
+var shortLength;
+var longLength;
+var volume;
+var mute;
+var currentTheme;
+
+
 
 // Setup
 var clock = new Pomodoro(update);
 clock.setup();
-
+clockHand("reset");
+displayIntervalType(true);
+fetchCookies();
+setup();
 
 // Buttons on timer
 $(".start").click(function() {
@@ -19,28 +34,85 @@ $(".reset").click(function() {
 });
 
 
+function devMode(){
+  workIntervals = 4;
+  workLength = .05;
+  shortLength = .025;
+  longLength = .1;
+  volume = 1;
+  mute = false;
+  currentTheme = "tomato";
+  setup();
+}
+
+
+function setup() {
+  changeTheme(currentTheme);
+  var settings = [];
+  settings.push($("#workLength").val(workLength));
+  settings.push($("#shortLength").val(shortLength));
+  settings.push($("#longLength").val(longLength));
+  settings.push($("#mute").prop("checked", mute));
+  settings.push($("#volume").val(volume));
+  settings.push($("#workIntervals").val(workIntervals));
+  for (var index in settings) {
+    updatedSettings(settings[index][0]);
+  }
+  clock.setup();
+  clockHand("reset");
+  displayIntervalType(true);
+}
+
+// Delete Cookies
+function deleteCookies() {
+  var cookies = ["workLength", "shortLength",, "longLength", "mute", "volume", "workIntervals", "theme" ];
+  for (var index in cookies) {
+    Cookies.remove(cookies[index]);
+  }
+}
+
+// Fetch cookies
+function fetchCookies() {
+  workIntervals = Cookies.get("workIntervals")? Cookies.get("workIntervals") : 4;
+  workLength = Cookies.get("workLength")? Cookies.get("workLength") : 25;
+  shortLength = Cookies.get("shortLength")? Cookies.get("shortLength") : 5;
+  longLength = Cookies.get("longLength")? Cookies.get("longLength") : 15;
+  volume = Cookies.get("volume")? Cookies.get("volume") : 1;
+  mute = Cookies.get("mute")? Cookies.get("mute") : false;
+  mute = mute === "true" ? true : false;
+  currentTheme = Cookies.get("theme")? Cookies.get("theme") : "tomato";
+}
+
 // Button's functions
 function reset(){
   clock.reset();
   stopAudio();
-  $(".content").removeClass("flash");
+  alarm("stop");
   showNotice(false);
+  clockHand("reset");
 }
 function start(){
-  $(".content").removeClass("flash");
+  alarm("stop");
   stopAudio();
-  if(clock.paused && clock.currentTime == 0)
+  if(clock.paused && clock.currentTime == 0) {
     showNotice(false);
-  clock.start();
+  }
+  if(clock.paused) {
+    clock.start();
+    clockHand("play");
+  }
 }
 function pause() {
-  $(".content").removeClass("flash");
+  alarm("stop");
   stopAudio();
-  clock.pause();
+  if(!clock.paused) {
+    clock.pause();
+    clockHand("pause");
+  }
 }
 
 // Prevent settings panel from closing if interacting with timer buttons
-$(".timer-buttons").click(function(evt){
+$(".cbtn").click(function(evt){
   evt.stopPropagation();
 });
 //Open settings panel
@@ -76,6 +148,24 @@ $("input").change(function(evt){
   updatedSettings(this);
 });
 
+$(".theme-btn").click(function(){
+  var theme = this.innerText.toLocaleLowerCase();
+  changeTheme(theme);
+});
+
+
+
+// Reset settings to default
+$(".default").click(function(){
+  changeTheme("tomato");
+  deleteCookies();
+  fetchCookies();
+  setup();
+  showNotice(false);
+});
+
+
+
 // Set a warning/alert
 function setAlert(msg ,div) {
   div = $(div);
@@ -107,9 +197,24 @@ function update(val){
   if(clock.finished) {
     alarm();
   }
-  var intervalType = titleCase(clock.currentIntervalType);
+  if(clock.currentTime == 0 && clock.paused) {
+      clockHand("reset");
+  }
+  var tempintervalType = titleCase(clock.currentIntervalType);
+  if(tempintervalType !== intervalType) {
+    var tempIntervals = clock.workSessions+1;
+    intervalType = tempintervalType;
+    if(currentInterval !== tempIntervals && intervalType === "Work") {
+      currentInterval = tempIntervals;
+      displayIntervalType(true);
+    }
+    else {
+      displayIntervalType();
+    }
+
+
+  }
   var displayTime = val[2]+":"+val[1];
-  $(".title").html(intervalType + " : " + clock.workSessions);
   $(".clock-display").html(displayTime+"."+val[0][0]);
   document.title = intervalType+":"+displayTime;
 }
@@ -132,7 +237,7 @@ function updatedSettings(input) {
       $("audio").each(function() {
         this.volume = val;
       });
-      return;
+
       break;
     case "mute":
       $("audio").each(function() {
@@ -141,7 +246,7 @@ function updatedSettings(input) {
         else
           this.muted = false;
       });
-      return;
+      val = $("#mute")[0].checked;
       break;
     case "workLength":
       clock.setWorkLength(val);
@@ -159,21 +264,39 @@ function updatedSettings(input) {
 
   }
   //show notice that settings won't have immediate effect
-  if(clock.paused && clock.currentTime === 0){
+  var skip = !(prop === "mute" || prop === "volume")
+  if( skip && clock.paused && clock.currentTime === 0){
     clock.setup(clock.currentIntervalType);
     pause();
     showNotice(false);
   }
-  else {
+  else if(skip) {
     showNotice(true);
   }
+  Cookies.set(prop, val);
 
 }
 
 
+// Change Theme
+function changeTheme(theme){
+  $(".clock-face").removeClass(currentTheme);
+  $(".clock-display").removeClass(currentTheme);
+  currentTheme = theme;
+  $(".clock-face").addClass(currentTheme);
+  $(".clock-display").addClass(currentTheme);
+
+  Cookies.set("theme", currentTheme);
+}
+
+
 //Fired when timer finishes
-function alarm(){
-  $(".content").addClass("flash");
+function alarm(condtion){
+  if (condtion == "stop") {
+      $(".clock-face").removeClass("flash");
+      return;
+  }
+  $(".clock-face").addClass("flash");
   $("audio")[0].play();
   flashing = true;
   flashTitle();
@@ -216,4 +339,40 @@ function flashTitle() {
     else {
 
     }
+}
+
+
+//Clock face animation
+function clockHand(state){
+  var hand = $(".clock-hand");
+  var currentState = hand.css("animation-play-state");
+  if(state == "pause") {
+    hand.css("animation-play-state", "paused");
+  }
+  else if(state == "play") {
+    hand.css("animation-play-state", "running");
+  }
+  else if(state == "reset") {
+    var newTime = clock.currentInterval/1000 + "s";
+    hand.removeClass("hand-animation").animate({"nothing":null}, 1, function(){
+      $(this).addClass("hand-animation");
+    });
+    hand.css("animation-duration", newTime);
+    hand.css("animation-play-state", "paused");
+  }
+
+}
+
+function displayIntervalType(intervals) {
+  if(intervals)
+    $(".interval-count").addClass("interval-type-scroll");
+  $(".interval-type").addClass("interval-type-scroll");
+  setTimeout(function(){
+    $(".interval-type").text(intervalType);
+    $(".interval-count").text(currentInterval);
+    setTimeout(function(){
+      $(".interval-type").removeClass("interval-type-scroll");
+      $(".interval-count").removeClass("interval-type-scroll");
+    },500);
+  },500);
 }

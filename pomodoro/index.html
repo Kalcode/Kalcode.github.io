@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=400">
   <title>Work Intervals: </title>
 
   <!-- Normalize -->
@@ -13,6 +13,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <!-- Fon Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -20,6 +21,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Orbitron:700,500' rel='stylesheet' type='text/css'>
   <!-- Custom style -->
   <link rel="stylesheet" href="css/main.css">
   <script src="scripts/prefixfree.min.js" charset="utf-8"></script>
@@ -46,24 +49,47 @@
 
   <div class="container-fluid">
     <div class="content">
+
       <div class="clock">
-        <div class="clock-face">
+        <button class="fa fa-cog cbtn settings-btn"></button>
+        <div class="clock-face tomato">
+          <div class="clock-display tomato"></div>
+          <div class="interval-type-div">
+            Task
+            <div class="interval-type">
+            </div>
+          </div>
+          <div class="interval-count-div">
+            Interval
+            <div class="interval-count">
+            </div>
+          </div>
           <svg class="clock-svg">
             <circle class="clock-small-dash" r="138" cy="150" cx="150"/>
             <circle class="clock-big-dash" r="138" cy="150" cx="150"/>
           </svg>
+          <div class="clock-hand hand-animation"></div>
           <div class="clock-glass">
+            <div class="clock-buttons">
+              <button class="fa fa-play cbtn start"></button>
+              <button class="fa fa-pause cbtn pause"></button>
+              <button class="cbtn reset">RESET</button>
+            </div>
           </div>
         </div>
       </div>
+      <audio src="sounds/alarm1.mp3"></audio>
     </div>
   </div>
 
 <!-- Settings pull out panel -->
 <div class="settings">
-  <div class="wrapper">
+  <div class="settings-title">
     <button class="close">X</button>
-    <h2>Settings </h2>
+    <h2>Settings</h2>
+  </div>
+
+  <div class="wrapper">
     <div class="settings-buttons">
       <h3>Sound</h3>
       <hr>
@@ -94,6 +120,16 @@
               <input type="number" id="workIntervals" value="4" min="1" max="9999">
           </label>
       </div>
+      <div class="color-select-div">
+        <h3> Color Theme </h3>
+        <hr>
+        <button class="tomato theme-btn">Tomato</button>
+        <button class="forest theme-btn">Forest</button>
+        <button class="sky theme-btn">Sky</button>
+        <button class="pink theme-btn">Pink</button>
+        <button class="clear theme-btn">Clear</button>
+      </div>
+      <button class="default">Reset to Default</button>
       <div id="updatedSettings">Setting have updated, new settings won't take effect until timer resets or next interval.
       </div>
     </div>
@@ -112,6 +148,9 @@
   <!-- jQuery  -->
   <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  <!-- COOKIES! -->
+  <script src="scripts/js.cookie.js"></script>
 
   <!-- Custom script -->
   <script src="scripts/pomodoro.js"></script>
