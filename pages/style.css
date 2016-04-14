@@ -36,21 +36,18 @@ a {
   padding: 10px 30px;
   border-bottom: 1px solid #C1C1C1;
   text-shadow: 2px 2px 4px #C7C7C7;
-  background-color: black;
-  color: transparent;
-  text-shadow: 0px 2px 3px rgba(250,250,250,0.8);
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
   width: 155px;
   height: 23px;
+  color: rgba(100,100,100, 0.8);
+  text-shadow: 1px 4px 6px #E4E4E4, 0 0 0 #000, 1px 4px 6px #E4E4E4;
 }
 a:visited {
-  color: black;
+  color: rgba(100,100,100, 0.8);
 }
 
 a:hover {
-  background-color: rgba(0,0,200,.8);
+  color: rgba(0,0,200,.4);
+  background-color: #DADADA;
 }
 
 a:active {
