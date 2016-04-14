@@ -8,10 +8,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>What is Node.js - David Clausen</title>
+    <title>Pomodoro Technique - David Clausen</title>
     <meta name="description" content="Aspiring Web Developer and Ex-Chef, Currently Looking for Full-Stack Opportunities.
 ">
-    <meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="What is Node.js - David Clausen"><meta property="og:site_name" content="David Clausen"><meta property="og:description" content="Aspiring Web Developer and Ex-Chef, Currently Looking for Full-Stack Opportunities."><meta property="og:url" content="/nodejs/guides/2014/12/13/what-is-nodejs/"><meta property="article:published_time" content="2014-12-13T22:07:49-06:00"><meta property="article:author" content="/blog/about">
+    <meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Pomodoro Technique - David Clausen"><meta property="og:site_name" content="David Clausen"><meta property="og:description" content="Aspiring Web Developer and Ex-Chef, Currently Looking for Full-Stack Opportunities."><meta property="og:url" content="/first-post"><meta property="article:published_time" content="2016-04-14T00:00:00-05:00"><meta property="article:author" content="/blog/about">
   
     
 
@@ -20,7 +20,7 @@
     <link rel="alternate" type="application/rss+xml" href="/blog/feed.xml">
     <link rel="shortcut icon" href="/blog/favicon.ico">
     <link rel="prefetch" href="">
-    <link rel="canonical" href="/blog/nodejs/guides/2014/12/13/what-is-nodejs/">
+    <link rel="canonical" href="/blog/first-post">
     <link rel="stylesheet" 
     href="/blog/assets/css/main.css">
 
@@ -56,57 +56,23 @@
   
 
   
-    <div class="banner_video">
-      <iframe width="560" height="315" src="//www.youtube.com/embed/pU9Q6oiQNd0" frameborder="0" allowfullscreen></iframe>
-    </div>
-  
 
   <header class="post-header">
-    <h1 class="post-title">What is Node.js</h1>
+    <h1 class="post-title">Pomodoro Technique</h1>
     <p class="post-meta">
     
       <span class="categories">
-      NodeJS and Guides
+      updates
       </span> |
     
     <span class="post-date">
-    Dec 13, 2014  
+    Apr 14, 2016  
     </span>
     </p>
   </header>
 
   <article class="post-content">
-    <p>Node.js is an open source, cross-platform runtime environment for server-side
-and networking applications. Node.js applications are written in JavaScript,
-and can be run within the Node.js runtime on OS X, Microsoft Windows,
-Linux and FreeBSD.</p>
-
-<blockquote>
-  <p>Node.js is a platform built on Chrome’s JavaScript runtime for easily building
-fast, scalable network applications. Node.js uses an event-driven,
-non-blocking I/O model that makes it lightweight and efficient,
-perfect for data-intensive real-time applications that run across distributed
-devices.</p>
-</blockquote>
-
-<h2 id="example-web-server">Example web server</h2>
-
-<p>This simple web server written in Node responds with “Hello World” for every
-request.</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
-<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'text/plain'</span><span class="p">});</span>
-  <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">'Hello World\n'</span><span class="p">);</span>
-<span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="mi">1337</span><span class="p">,</span> <span class="s1">'127.0.0.1'</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Server running at http://127.0.0.1:1337/'</span><span class="p">);</span></code></pre></figure>
-
-<p>To run the server, put the code into a file example.js and execute it with the
-node program from the command line:</p>
-
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>node example.js</code></pre></figure>
-
-<p>Node official website: nodejs.org</p>
+    
     
   </article>
 
@@ -114,15 +80,6 @@ node program from the command line:</p>
     <div class="related-posts">
       <h4>Related Posts</h4>
       <ul>
-        
-          <li>
-            <h5>
-              <a href="/blog/first-post">
-                Pomodoro Technique
-                <small>14 Apr 2016</small>
-              </a>
-            </h5>
-          </li>
         
           <li>
             <h5>
@@ -142,6 +99,15 @@ node program from the command line:</p>
             </h5>
           </li>
         
+          <li>
+            <h5>
+              <a href="/blog/theme/guides/2014/12/20/gaya-jekyll-theme/">
+                Gaya Jekyll Theme
+                <small>20 Dec 2014</small>
+              </a>
+            </h5>
+          </li>
+        
       </ul>
     </div>
   
@@ -154,12 +120,6 @@ node program from the command line:</p>
       
   </div>
   
-  
-    <div class="comments">
-        <a href="javascript:;" class="load-view">View Comments...</a>
-        <div id="disqus_thread"></div>
-        <div id="g-comments"></div>
-    </div>
   
 </div>
 
