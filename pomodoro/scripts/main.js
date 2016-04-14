@@ -51,6 +51,7 @@ function setup() {
   changeTheme(currentTheme);
   $(".scale").text(scale);
   updateScale();
+  currentInterval = 1;
   var settings = [];
   settings.push($("#workLength").val(workLength));
   settings.push($("#shortLength").val(shortLength));
@@ -93,6 +94,7 @@ function reset(){
   clock.reset();
   stopAudio();
   alarm("stop");
+  setup()
   showNotice(false);
   clockHand("reset");
 }
@@ -218,7 +220,7 @@ function update(val){
   if(clock.currentTime == 0 && clock.paused) {
       clockHand("reset");
   }
-  var tempintervalType = titleCase(clock.currentIntervalType);
+  var tempintervalType = titleCase(clock.currentIntervalType) == "Work" ? "Work" : "Break";
   if(tempintervalType !== intervalType) {
     var tempIntervals = clock.workSessions+1;
     intervalType = tempintervalType == "Work" ? "Work" : "Break";

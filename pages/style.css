@@ -1,0 +1,17 @@
+body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+ul {
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  padding: 0;
+}
+
+li {
+  
+  background-color: black;
+}
