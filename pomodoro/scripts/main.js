@@ -19,6 +19,7 @@ var clock = new Pomodoro(update);
 clock.setup();
 clockHand("reset");
 displayIntervalType(true);
+rescale();
 fetchCookies();
 setup();
 
@@ -326,7 +327,6 @@ function updateScale(){
 
 function scaleButtons(direction){
   var newScale = Number($(".scale").text()) + direction;
-  console.log(newScale);
   newScale = newScale;
   if(newScale == Number(scale) || newScale < 1 || newScale > 4)
     return
@@ -425,6 +425,23 @@ function displayIntervalType(intervals) {
 }
 
 function rescale(){
-  var width = $(window).width();
-  var height = $(window).width();
+  if( navigator.userAgent.match(/Android/i)
+|| navigator.userAgent.match(/webOS/i)
+|| navigator.userAgent.match(/iPhone/i)
+|| navigator.userAgent.match(/iPad/i)
+|| navigator.userAgent.match(/iPod/i)
+|| navigator.userAgent.match(/BlackBerry/i)
+|| navigator.userAgent.match(/Windows Phone/i)
+){
+    var width = $(window).width();
+    console.log(width);
+    if( width < 650) {
+      Cookies.set("scale", "1", { expires: 365 });
+    }
+   return true;
+ }
+else {
+   return false;
+ }
+
 }
