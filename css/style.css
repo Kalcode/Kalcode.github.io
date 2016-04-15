@@ -61,6 +61,17 @@ body {
 
 .nav-left{
   float:left;
+  height: 100%
+}
+
+.nav-left a{
+  display: inline-block;
+  height: 100%;
+}
+
+.nav-left a:hover {
+  background-color:rgba(0, 0, 0, .6);
+
 }
 
 .nav-right {
