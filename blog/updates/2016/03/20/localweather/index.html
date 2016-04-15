@@ -8,10 +8,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>David Clausen</title>
+    <title>Local Weather Project - David Clausen</title>
     <meta name="description" content="Aspiring Web Developer and Ex-Chef. Currently Looking for Full-Stack Opportunities.
 ">
-    <meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:site_name" content="David Clausen"><meta property="og:description" content="Aspiring Web Developer and Ex-Chef. Currently Looking for Full-Stack Opportunities."><meta property="og:url" content="/"><meta property="article:author" content="/blog/about">
+    <meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Local Weather Project - David Clausen"><meta property="og:site_name" content="David Clausen"><meta property="og:description" content="Aspiring Web Developer and Ex-Chef. Currently Looking for Full-Stack Opportunities."><meta property="og:url" content="/updates/2016/03/20/localweather/"><meta property="article:published_time" content="2016-03-20T00:00:00-05:00"><meta property="article:author" content="/blog/about">
 
     
 
@@ -20,7 +20,7 @@
     <link rel="alternate" type="application/rss+xml" href="/blog/feed.xml">
     <link rel="shortcut icon" href="/blog/favicon.ico">
     <link rel="prefetch" href="">
-    <link rel="canonical" href="/blog/">
+    <link rel="canonical" href="/blog/updates/2016/03/20/localweather/">
     <link rel="stylesheet"
     href="/blog/assets/css/main.css">
 
@@ -51,19 +51,14 @@
       </div>
 
       <div class="container content">
-          <div class="posts">
+          <div class="post">
+
   
+
   
-  <article class="post">
 
-    
-
-    <h1 class="post-title">
-      <a href="/blog/updates/2016/04/14/tictactie/">
-        Tic Tac Tie
-      </a>
-    </h1>
-
+  <header class="post-header">
+    <h1 class="post-title">Local Weather Project</h1>
     <p class="post-meta">
     
       <span class="categories">
@@ -71,167 +66,93 @@
       </span> |
     
     <span class="post-date">
-    Apr 14, 2016  
+    Mar 20, 2016  
     </span>
     </p>
+  </header>
 
-    <p>Tic Tac Tie was an accidental pun made while discussing the program’s computer logic it used
-against the player. It was suppose to be simple and aim to always create a draw. Hence the ‘tie’.</p>
+  <article class="post-content">
+    <p>Project was creating a weather app that gets your current location
+via browser. I used the recommend weather app API <a href="http://openweathermap.org/api" target="blank">OpenWeatherMap</a>.
+Relatively straight forward project. Few days ago I did the project with the
+random quote API, so that was very helpful here. Parsing the JSON took a short
+learning curve but otherwise not very troublesome.</p>
 
+<p>Really starting to get a very comfortable feel with CSS. CSS was probably the more
+intimidating of the HTML frontend stuff. It always seems like a fight to get something
+the way you want it. Lately that doesn’t seem to be the case.</p>
 
-    <a href="/blog/updates/2016/04/14/tictactie/">
-      Continue reading »
-    </a>
+<p>Well here it is and my code will always be available on my github : Live <a href="http://kalcode.github.io/localweather/" target="blank">Local Weather App</a></p>
+
+<h3 id="css-frustrations-rant-warning">CSS Frustrations /rant-warning</h3>
+
+<p>Things like clearfix on everything, negative margins and in simple things like fighting a solution to center stuff.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">*</span> <span class="p">{</span>
+  <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span> <span class="err">!important</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="err">!important</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">-999999</span> <span class="cp">!important</span>
+  <span class="p">}</span></code></pre></figure>
+
+<p>Just seemed like everything was a ‘hacky’ solution. Things are getting a lot more clear for me
+and I am sure that in part to be able to exclusively use CSS3 and ditch a lot of the old
+hacky stuff due to browser compatibility but also getting a better understanding of the
+basics have been great.</p>
+
+<hr />
+
+<p>Next few projects will have more focus on making things look much cleaner and
+more attractive.</p>
+    
   </article>
+
   
+    <div class="related-posts">
+      <h4>Related Posts</h4>
+      <ul>
+        
+          <li>
+            <h5>
+              <a href="/blog/updates/2016/04/14/tictactie/">
+                Tic Tac Tie
+                <small>14 Apr 2016</small>
+              </a>
+            </h5>
+          </li>
+        
+          <li>
+            <h5>
+              <a href="/blog/updates/2016/04/12/pomodoro/">
+                Pomodoro Technique
+                <small>12 Apr 2016</small>
+              </a>
+            </h5>
+          </li>
+        
+          <li>
+            <h5>
+              <a href="/blog/updates/2016/04/04/big-display-calculator/">
+                Big Display Calculator
+                <small>04 Apr 2016</small>
+              </a>
+            </h5>
+          </li>
+        
+      </ul>
+    </div>
   
-  <article class="post">
+
+  <div class="author-info">
+    
+      <div class="author">   <a href="/blog/about">    <img      src="/blog/assets/images/avatar.png"      alt="David Clausen" width="60" height="60" />  </a>    <h5>Author</h4>  <h6>    <a href="/blog/about">      David Clausen    </a>  </h5>  <p>    Find me on            <a title="Kalcode on Github"            href="https://github.com/Kalcode"            class="github" target="_blank">Github</a>                /        <a title="David C on Linkedin"            href="https://www.linkedin.com/in/david-clausen-a06606116"            class="linkedin" target="_blank">Linkedin</a>                /        <a title="Kalcoder on Twitter"            href="https://twitter.com/Kalcoder"            class="twitter" target="_blank">Twitter</a>      </p></div>
 
     
-
-    <h1 class="post-title">
-      <a href="/blog/updates/2016/04/12/pomodoro/">
-        Pomodoro Technique
-      </a>
-    </h1>
-
-    <p class="post-meta">
-    
-      <span class="categories">
-      updates
-      </span> |
-    
-    <span class="post-date">
-    Apr 12, 2016  
-    </span>
-    </p>
-
-    <p>I recently did a project that required you to create a Pomodoro timer, a productivity tool. I am a
-big fan of their technique. Following it, even loosely, has greatly improved my
-ability to focus, study and in general knock out projects.</p>
-
-
-    <a href="/blog/updates/2016/04/12/pomodoro/">
-      Continue reading »
-    </a>
-  </article>
   
+      
+  </div>
   
-  <article class="post">
-
-    
-
-    <h1 class="post-title">
-      <a href="/blog/updates/2016/04/04/big-display-calculator/">
-        Big Display Calculator
-      </a>
-    </h1>
-
-    <p class="post-meta">
-    
-      <span class="categories">
-      updates
-      </span> |
-    
-    <span class="post-date">
-    Apr 4, 2016  
-    </span>
-    </p>
-
-    <p>Wanted to recreate the classic old style calculator especially their functions.</p>
-
-
-    <a href="/blog/updates/2016/04/04/big-display-calculator/">
-      Continue reading »
-    </a>
-  </article>
-  
-  
-  <article class="post">
-
-    
-
-    <h1 class="post-title">
-      <a href="/blog/updates/2016/03/28/twitch-stream/">
-        Twitch Watcher
-      </a>
-    </h1>
-
-    <p class="post-meta">
-    
-      <span class="categories">
-      updates
-      </span> |
-    
-    <span class="post-date">
-    Mar 28, 2016  
-    </span>
-    </p>
-
-    <p>Fairly straight forward app. Handling JSON from a get request but a lot more
-information coming in and not consistent. So that helped learn some new obstacles and
-how to hurdle them.</p>
-
-
-    <a href="/blog/updates/2016/03/28/twitch-stream/">
-      Continue reading »
-    </a>
-  </article>
-  
-  
-  <article class="post">
-
-    
-
-    <h1 class="post-title">
-      <a href="/blog/updates/2016/03/24/wiki-viewer/">
-        Wiki Search Viewer
-      </a>
-    </h1>
-
-    <p class="post-meta">
-    
-      <span class="categories">
-      updates
-      </span> |
-    
-    <span class="post-date">
-    Mar 24, 2016  
-    </span>
-    </p>
-
-    <p><img src="/blog/assets/images/wiki-banner.png" alt="snapshot" /></p>
-
-
-    <a href="/blog/updates/2016/03/24/wiki-viewer/">
-      Continue reading »
-    </a>
-  </article>
   
 </div>
-
-
-<div class="pagination">
-  
-  
-      <a class="pagination-item older btn" href="/blog/page2/">Older</a>    
-  
-  
-  
-    <span class="pagination-item newer btn-disabled">Newer</span>
-    
-  
-</div>
-
-
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "url": "/blog/"
-    }
-}
-</script>
 
       </div>
       <a href="#0" class="wc-top">Top</a>

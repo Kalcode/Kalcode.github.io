@@ -2,13 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>David Clausen</title>
-    <description>Aspiring Web Developer and Ex-Chef, Currently Looking for Full-Stack Opportunities.
+    <description>Aspiring Web Developer and Ex-Chef. Currently Looking for Full-Stack Opportunities.
 </description>
     <link>/blog/</link>
     <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Apr 2016 19:46:01 -0500</pubDate>
-    <lastBuildDate>Thu, 14 Apr 2016 19:46:01 -0500</lastBuildDate>
+    <pubDate>Thu, 14 Apr 2016 21:47:33 -0500</pubDate>
+    <lastBuildDate>Thu, 14 Apr 2016 21:47:33 -0500</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>Tic Tac Tie</title>
+        <description>&lt;p&gt;Tic Tac Tie was an accidental pun made while discussing the program’s computer logic it used
+against the player. It was suppose to be simple and aim to always create a draw. Hence the ‘tie’.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately I did find one win condition it can’t seem to beat.&lt;/p&gt;
+
+&lt;p&gt;Which is okay as it was my first ‘AI’ I’ve made to play against someone.&lt;/p&gt;
+
+&lt;p&gt;I didn’t do much design on this one. I may revist it. Main goal was to see how
+quickly I could go from concept in my head to fully functional. I had to get up early
+take a long car ride downtown. I felt I had all the kinks and issues worked out
+in my head. How i’d style it, the html layout and the javascript.&lt;/p&gt;
+
+&lt;p&gt;So it felt great to write HUGE chunks of it with little testing before finishing.
+Still a lot of micro tweaks, but overall it works great.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kalcode.github.io/tictactie/&quot; target=&quot;blank&quot;&gt;Tic Tac Tie&lt;/a&gt;, as usual you can find the code on my github.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 Apr 2016 00:00:00 -0500</pubDate>
+        <link>/blog/updates/2016/04/14/tictactie/</link>
+        <guid isPermaLink="true">/blog/updates/2016/04/14/tictactie/</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
     
       <item>
         <title>Pomodoro Technique</title>
@@ -18,10 +46,15 @@ ability to focus, study and in general knock out projects.&lt;/p&gt;
 
 &lt;p&gt;Check out their website to get an idea what it’s about.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/pomodoro.png&quot; alt=&quot;placeholder&quot; title=&quot;Large example image&quot; /&gt;
-&lt;a href=&quot;http://pomodorotechnique.com/&quot;&gt;Pomodoro Technique Website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/pomodoro.png&quot; alt=&quot;pomodoro&quot; /&gt;
+&lt;a href=&quot;http://pomodorotechnique.com/&quot; target=&quot;blank&quot;&gt;Pomodoro Technique Website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Here is the link currently to my timer &lt;a href=&quot;http://kalcode.github.io/pomodoro/&quot;&gt;Promodoro Timer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am really proud of this, I think its not only the best looking app I’ve but the most functional too.
+Here is the link currently to my timer &lt;a href=&quot;http://kalcode.github.io/pomodoro/&quot; target=&quot;blank&quot;&gt;Promodoro Timer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I used the Jquery UI &lt;em&gt;A LOT&lt;/em&gt; less this time. I used it for some warning boxes on inputs and the slide out settings, but
+the rest of the animation is just custom CSS animation. Great practice learning that as I feel vastly more
+comfortable rolling my own animation.&lt;/p&gt;
 
 &lt;p&gt;Comment below and let me know what you think. Hopefully you find it as useful as
 I do.&lt;/p&gt;
@@ -39,17 +72,166 @@ I do.&lt;/p&gt;
         <title>Big Display Calculator</title>
         <description>&lt;p&gt;Wanted to recreate the classic old style calculator especially their functions.&lt;/p&gt;
 
+&lt;p&gt;Finding less use for bootstrap as I get a handle on CSS. Bootstrap is nice to have but
+it often feels like throwing too much at something that really doesn’t need it.&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/assets/images/calculator-big-display.jpg&quot; alt=&quot;calculator&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Check it out at my github, live version here: &lt;a href=&quot;http://kalcode.github.io/calculator/&quot;&gt;Calculator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Check it out at my github, live version here: &lt;a href=&quot;http://kalcode.github.io/calculator/&quot; target=&quot;blank&quot;&gt;Calculator&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 09 Apr 2016 00:00:00 -0500</pubDate>
-        <link>/blog/updates/2016/04/09/big-display-calculator/</link>
-        <guid isPermaLink="true">/blog/updates/2016/04/09/big-display-calculator/</guid>
+        <pubDate>Mon, 04 Apr 2016 00:00:00 -0500</pubDate>
+        <link>/blog/updates/2016/04/04/big-display-calculator/</link>
+        <guid isPermaLink="true">/blog/updates/2016/04/04/big-display-calculator/</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>Twitch Watcher</title>
+        <description>&lt;p&gt;Fairly straight forward app. Handling JSON from a get request but a lot more
+information coming in and not consistent. So that helped learn some new obstacles and
+how to hurdle them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/twitch-watcher.png&quot; alt=&quot;snapshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I am liking the idea of going clean and simple. The list is rather simple to update,
+so creating one designed for someone else favorite streamers would be trivial.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kalcode.github.io/twitchstreamer/&quot;&gt;Twitch Watcher&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing that was exciting this project was saving results in a remote area like
+a ‘temp’ database. Found a website&lt;/p&gt;
+
+&lt;h3 id=&quot;browsers-rant&quot;&gt;Browsers rant&lt;/h3&gt;
+
+&lt;p&gt;Latest frustration has been Firefox, it seems like Opera, Safari Chrome and even
+Edge all have similar features and the way they deal with them. Firefox on the other hand
+is the edge case browser now. It seems it mostly due to being very strict in following
+the specifications, so I guess they can’t be faulted.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Mar 2016 00:00:00 -0500</pubDate>
+        <link>/blog/updates/2016/03/28/twitch-stream/</link>
+        <guid isPermaLink="true">/blog/updates/2016/03/28/twitch-stream/</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>Wiki Search Viewer</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/blog/assets/images/wiki-banner.png&quot; alt=&quot;snapshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Latest project is a simple get request to wiki for your search. I mostly liked
+the design I settled on. Simple and clean.&lt;/p&gt;
+
+&lt;p&gt;First time trying out animation, I am using Jquery UI for it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kalcode.github.io/wikisearch/&quot; target=&quot;blank&quot;&gt;Wiki Search Viewer&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 24 Mar 2016 00:00:00 -0500</pubDate>
+        <link>/blog/updates/2016/03/24/wiki-viewer/</link>
+        <guid isPermaLink="true">/blog/updates/2016/03/24/wiki-viewer/</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>Local Weather Project</title>
+        <description>&lt;p&gt;Project was creating a weather app that gets your current location
+via browser. I used the recommend weather app API &lt;a href=&quot;http://openweathermap.org/api&quot; target=&quot;blank&quot;&gt;OpenWeatherMap&lt;/a&gt;.
+Relatively straight forward project. Few days ago I did the project with the
+random quote API, so that was very helpful here. Parsing the JSON took a short
+learning curve but otherwise not very troublesome.&lt;/p&gt;
+
+&lt;p&gt;Really starting to get a very comfortable feel with CSS. CSS was probably the more
+intimidating of the HTML frontend stuff. It always seems like a fight to get something
+the way you want it. Lately that doesn’t seem to be the case.&lt;/p&gt;
+
+&lt;p&gt;Well here it is and my code will always be available on my github : Live &lt;a href=&quot;http://kalcode.github.io/localweather/&quot; target=&quot;blank&quot;&gt;Local Weather App&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;css-frustrations-rant-warning&quot;&gt;CSS Frustrations /rant-warning&lt;/h3&gt;
+
+&lt;p&gt;Things like clearfix on everything, negative margins and in simple things like fighting a solution to center stuff.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;both&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;!important&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;!important&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-999999&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;!important&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Just seemed like everything was a ‘hacky’ solution. Things are getting a lot more clear for me
+and I am sure that in part to be able to exclusively use CSS3 and ditch a lot of the old
+hacky stuff due to browser compatibility but also getting a better understanding of the
+basics have been great.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Next few projects will have more focus on making things look much cleaner and
+more attractive.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 20 Mar 2016 00:00:00 -0500</pubDate>
+        <link>/blog/updates/2016/03/20/localweather/</link>
+        <guid isPermaLink="true">/blog/updates/2016/03/20/localweather/</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>Profile Page</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://kalcode.github.io/&quot;&gt;My Profile Page&lt;/a&gt;, first start of the projects.
+Profile page is a good way to start it, so I was excited to get started. I am
+not to good with CSS but I really liked the way this came out.&lt;/p&gt;
+
+&lt;p&gt;I guess its a good start to a portfolio and soon I can add projects to it.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Mar 2016 00:00:00 -0500</pubDate>
+        <link>/blog/updates/2016/03/15/profile/</link>
+        <guid isPermaLink="true">/blog/updates/2016/03/15/profile/</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll and Blogging</title>
+        <description>&lt;p&gt;Got Jekyll up and running for the start of my blog. Gonna use this to motivate myself
+to spend some time reflecting on the projects I’ve been doing. Trying to learn a lot
+in the timeframe I have has definitely crammed more than I can reflect.&lt;/p&gt;
+
+&lt;p&gt;With these next more freeform projects coming up I should be able to test myself in
+how far I have come and give myself opportunities to put myself outside my comfort zone.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/sample-banner-image-1.jpg&quot; alt=&quot;jeklly&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jekyll was a fun process. This theme is very nice, a few tweaks here and there to change out
+some images, color theme and social icons.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up&quot;&gt;Setting up&lt;/h2&gt;
+
+&lt;p&gt;Some reason Github wouldn’t build my pages even though locally I wasn’t getting
+ any errors. So instead I’ve set it up locally to build the site and then push
+ it to my git page via a batch file.&lt;/p&gt;
+
+&lt;p&gt;This also required having a separate dev config too, which was interesting. On my
+side everything build flawlessly and pushing it seems to have no issues as it
+no longer requiring Github to builds the pages. This also means I can use
+whatever plug-in I desire.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Mar 2016 00:00:00 -0600</pubDate>
+        <link>/blog/updates/2016/03/10/jekyll/</link>
+        <guid isPermaLink="true">/blog/updates/2016/03/10/jekyll/</guid>
         
         
         <category>updates</category>
