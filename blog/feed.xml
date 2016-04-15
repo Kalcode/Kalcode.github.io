@@ -6,20 +6,20 @@
 </description>
     <link>/blog/</link>
     <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Apr 2016 19:43:32 -0500</pubDate>
-    <lastBuildDate>Thu, 14 Apr 2016 19:43:32 -0500</lastBuildDate>
+    <pubDate>Thu, 14 Apr 2016 19:46:01 -0500</pubDate>
+    <lastBuildDate>Thu, 14 Apr 2016 19:46:01 -0500</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
         <title>Pomodoro Technique</title>
-        <description>&lt;h1 id=&quot;pomodoro-technique&quot;&gt;Pomodoro Technique&lt;/h1&gt;
+        <description>&lt;p&gt;I recently did a project that required you to create a Pomodoro timer, a productivity tool. I am a
+big fan of their technique. Following it, even loosely, has greatly improved my
+ability to focus, study and in general knock out projects.&lt;/p&gt;
+
+&lt;p&gt;Check out their website to get an idea what it’s about.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/assets/images/pomodoro.png&quot; alt=&quot;placeholder&quot; title=&quot;Large example image&quot; /&gt;
 &lt;a href=&quot;http://pomodorotechnique.com/&quot;&gt;Pomodoro Technique Website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I recently did a project that required you to create a Pomodoro timer. I am a
-big fan of their technique. Following it, even loosely, has greatly improved my
-ability to focus, study and in general knock out projects.&lt;/p&gt;
 
 &lt;p&gt;Here is the link currently to my timer &lt;a href=&quot;http://kalcode.github.io/pomodoro/&quot;&gt;Promodoro Timer&lt;/a&gt;&lt;/p&gt;
 
@@ -37,13 +37,13 @@ I do.&lt;/p&gt;
     
       <item>
         <title>Big Display Calculator</title>
-        <description>&lt;h1 id=&quot;big-display-calculator-project&quot;&gt;Big Display Calculator Project&lt;/h1&gt;
+        <description>&lt;p&gt;Wanted to recreate the classic old style calculator especially their functions.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/assets/images/calculator-big-display.jpg&quot; alt=&quot;calculator&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-
-&lt;p&gt;Wanted to recreate the classic old style calculator especially their functions.&lt;/p&gt;
 
 &lt;p&gt;Check it out at my github, live version here: &lt;a href=&quot;http://kalcode.github.io/calculator/&quot;&gt;Calculator&lt;/a&gt;&lt;/p&gt;
 </description>
