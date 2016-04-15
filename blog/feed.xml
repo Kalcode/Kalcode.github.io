@@ -4,10 +4,10 @@
     <title>David Clausen</title>
     <description>Aspiring Web Developer and Ex-Chef, Currently Looking for Full-Stack Opportunities.
 </description>
-    <link>/blog/</link>
-    <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Apr 2016 19:37:01 -0500</pubDate>
-    <lastBuildDate>Thu, 14 Apr 2016 19:37:01 -0500</lastBuildDate>
+    <link>/blog//</link>
+    <atom:link href="/blog//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 14 Apr 2016 19:37:38 -0500</pubDate>
+    <lastBuildDate>Thu, 14 Apr 2016 19:37:38 -0500</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -27,8 +27,8 @@ ability to focus, study and in general knock out projects.&lt;/p&gt;
 I do.&lt;/p&gt;
 </description>
         <pubDate>Thu, 14 Apr 2016 00:00:00 -0500</pubDate>
-        <link>/blog/updates/2016/04/14/first-post/</link>
-        <guid isPermaLink="true">/blog/updates/2016/04/14/first-post/</guid>
+        <link>/blog//updates/2016/04/14/first-post/</link>
+        <guid isPermaLink="true">/blog//updates/2016/04/14/first-post/</guid>
         
         
         <category>updates</category>
@@ -48,8 +48,8 @@ I do.&lt;/p&gt;
 &lt;p&gt;Check it out at my github, live version here: &lt;a href=&quot;http://kalcode.github.io/calculator/&quot;&gt;Calculator&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 14 Apr 2016 00:00:00 -0500</pubDate>
-        <link>/blog/updates/2016/04/14/big-display-calculator/</link>
-        <guid isPermaLink="true">/blog/updates/2016/04/14/big-display-calculator/</guid>
+        <link>/blog//updates/2016/04/14/big-display-calculator/</link>
+        <guid isPermaLink="true">/blog//updates/2016/04/14/big-display-calculator/</guid>
         
         
         <category>updates</category>
