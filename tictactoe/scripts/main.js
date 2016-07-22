@@ -165,6 +165,9 @@ function makeMove() {
     if(results[0] !== "Move"){
 
     }
+    else if(ai.emptySpaces == 0){
+      displayResults("It's a Tie!");
+    }
     else {
       aiThinking = false;
     }

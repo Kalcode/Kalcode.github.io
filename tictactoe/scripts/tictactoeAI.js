@@ -37,6 +37,7 @@ TicTacToe.prototype.checkHorizontal = function() {
 
   //Check horizontal
   //Only check for empty spaces here
+  this.emptySpaces = [];
   for (var row = 0; row < 3; row++) {
     // For checking condition of rows
     var checkRow = "";
@@ -277,6 +278,7 @@ TicTacToe.prototype.updateBoard = function() {
 
     return this.results;
   }
+
   var x = this.nextMove[0][0];
   var y = this.nextMove[0][1];
   this.board[x][y] = this.symbol;
@@ -288,7 +290,6 @@ TicTacToe.prototype.updateBoard = function() {
       return this.results;
     }
     else {
-
     }
   }
   else {
