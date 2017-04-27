@@ -31,6 +31,7 @@ TicTacToe.prototype.eraseBoard = function () {
  this.results = [];
  this.nextMove = [];
  this.emptySpaces = [];
+ this.lastMove = "";
 };
 
 TicTacToe.prototype.checkHorizontal = function() {
