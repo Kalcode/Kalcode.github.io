@@ -1,0 +1,13 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "number-wizard.data.unityweb",
+"wasmCodeUrl": "number-wizard.wasm.code.unityweb",
+"wasmFrameworkUrl": "number-wizard.wasm.framework.unityweb",
+"asmCodeUrl": "number-wizard.asm.code.unityweb",
+"asmMemoryUrl": "number-wizard.asm.memory.unityweb",
+"asmFrameworkUrl": "number-wizard.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
